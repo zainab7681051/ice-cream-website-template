@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ice cream website template</title>
+	<link id="favicon" rel="icon" href="./icon-1.png" type="image/png">
+	<script type="text/javascript">
+		let faviconIndex = 1;
+		setInterval(() => {
+			const favicon = document.getElementById('favicon');
+			favicon.href = `./icon-${faviconIndex}.png`;
+			faviconIndex = faviconIndex % 5 + 1;
+		}, 700); 
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<!-- 
+set up vite
+set github reponpm
+ -->
