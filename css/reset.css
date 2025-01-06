@@ -1,0 +1,23 @@
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, a, div, h1, h2, h3, h4, h5, h6, p, span {
+    padding: 0;
+    margin: 0;
+    line-height: inherit;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+svg {
+    overflow: hidden;
+}
+img, svg {
+    vertical-align: middle;
+}
