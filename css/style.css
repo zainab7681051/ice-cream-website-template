@@ -1,31 +1,8 @@
 @import "./fonts.css";
 @import "./reset.css";
-/*
-------------NOTES-------------
-BEST APPROACH TO REVERSE ENGINEER IS TO START AT 1440px VIEWPORT WIDTH
-*/
+@import "./font_sizes.css";
+@import "./colors.css";
 :root {
-	--blue: #007bff;
-	--indigo: #6610f2;
-	--purple: #6f42c1;
-	--pink: #e83e8c;
-	--red: #dc3545;
-	--orange: #fd7e14;
-	--yellow: #ffc107;
-	--green: #28a745;
-	--teal: #20c997;
-	--cyan: #17a2b8;
-	--white: #fff;
-	--gray: #6c757d;
-	--gray-dark: #343a40;
-	--primary: #007bff;
-	--secondary: #6c757d;
-	--success: #28a745;
-	--info: #17a2b8;
-	--warning: #ffc107;
-	--danger: #dc3545;
-	--light: #f8f9fa;
-	--dark: #343a40;
 	--breakpoint-xs: 0;
 	--breakpoint-sm: 576px;
 	--breakpoint-md: 768px;
@@ -42,225 +19,95 @@ BEST APPROACH TO REVERSE ENGINEER IS TO START AT 1440px VIEWPORT WIDTH
     --font-size: 4.8vw; /* 20.64px when viewport width is 430px, 34.56px when 720px, etc. */
     --font-size-sm: 2.083vw;
     --font-size-xl: 1.041vw;
-    --pt: .75rem; /* padding-top */
-    --pr: .875rem;
-    --pb: .75rem;
-    --pl: .875rem;
-    --fs: clamp(20px,1.1rem,24px); /*font-size*/
+    --nav-pt: .75rem; /* padding-top */
+    --nav-pr: .875rem;
+    --nav-pb: .75rem;
+    --nav-pl: .875rem;
 }
-@media (min-width: 576px){
-    :root{
-        --pl: 1.75rem;
-        --pr: 1.75rem;
-        --fs: clamp(20px,1.5002400384rem,32px);
-    }
+@media (min-width: 320px) {
+  :root {
+    --font-16px-36px: calc(1rem + ((1vw - 3.2px) * 1.7857));
+    --popup-button-height-width:calc(6.25rem + ((1vw - 3.2px) * 8.9286));;
+    --popup-button-text-font-size:calc(1.75rem + ((1vw - 3.2px) * 0.7143));
+    min-height: 0vw;
+  }
 }
-@media (min-width: 1080px){
-    :root{
-        --pt: 1.25rem;
-        --pb: 1.25rem;
-    }
-}
-@media (min-width: 1440px){
-    :root{
-        --pl: 2rem;
-        --pr: 2rem;
-        --fs: clamp(12px,1.5009606148rem,300px);
-    }
-}
-html{
-	font-size: var(--font-size);
-}
-body {
-    margin: 0;
-    width: 100%;
-    display: block;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    font-family: FoundersGrotesk-Regular,Arial,Helvetica,sans-serif;
-    background-color: var(--dark);
-    scroll-behavior: auto!important;
+@media (min-width: 1440px) {
+  :root {
+    --font-16px-36px: 36px;
+    --popup-button-height--width:200px;
+    --popup-button-text-font-size: 36px;
+  }
 }
 
-body>main {
-    --white: #F3EFE6;
-    --whitev2: #FFFFFF;
-    --black: #000000;
-    --black2: #473D36;
-    --black3: #252220;
-    --red: #EF1525;
-    --red2: #EA1B0E;
-    --red3: #E27391;
-    --red4: #FF6B00;
-    --red5: #EF1525;
-    --red6: #BF4C6B;
-    --red7: #C13158;
-    --red8: #F68A9D;
-    --yellow: #FFD864;
-    --yellow2: #FFD249;
-    --yellow3: #FFC106;
-    --yellow4: #FFB800;
-    --yellow5: #CE8938;
-    --yellow6: #E58616;
-    --light-yellow: #FDEE9A;
-    --light-yellow2: #F8F2CB;
-    --pink: #EDC1CC;
-    --pink2: #F4B9C8;
-    --pink3: #EDC0CC;
-    --pink4: #F4B9C8;
-    --pink5: #FA7982;
-    --pink6: #FFB9C3;
-    --light-pink: #FFF0F2;
-    --creme: #FAF6DF;
-    --light-purple: #EAD7F0;
-    --purple: #A380AE;
-    --purple2: #D4B6D4;
-    --purple3: #90629D;
-    --purple4: #B595BF;
-    --purple5: #BD3257;
-    --purple6: #AB2339;
-    --purple7: #E5CAE5;
-    --gray: #F3EFE6;
-    --gold: #B09675;
-    --brown: #604442;
-    --brown2: #755855;
-    --brown3: #E5CDAE;
-    --lightYellow: #FDEE9A;
-    --lightYellow2: #F8F2CB;
-    --lightPink: #FFF0F2;
-    --lightPurple: #EAD7F0;
+body{
+    background-color: var(--black3);
+    font-family: FoundersGrotesk-Regular, sans-serif;
+    color: var(--white);
 }
-.navigation {
-    z-index: 102;
-    left: 0;
+.navigation{
+    width: 100%;
+    height: auto;
+    position: absolute;
     top: 0;
-    padding: var(--pt) var(--pr) var(--pb) var(--pl);
-    width: 100%;
-    position: absolute;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.navigation .row {
     display: flex;
-    flex-wrap: wrap;
-    margin-right: 0;
-    margin-left: 0;
-    opacity: .0001;
-    will-change: transform,opacity;    
-    align-items: center;
     justify-content: space-between;
+    padding: 1rem 2rem 1rem 2rem;
+    font-family: PPFormula-CondensedBold, sans-serif;
+    font-weight: 600;   
+    text-transform: uppercase;
+    font-size: var(--font-16px-36px);
+    cursor: pointer;
 }
-.navigation .row{
-    line-height: .93;
-    letter-spacing: .02em;
-    font-size: var(--fs);
+.top-right, .top-left{
+    color: var(--white);
 }
-.navigation .logo{
-    fill: #fff;
-    transition: fill .4s;
-    height: .925em;
+.top-left{
+    --brand-font-size:var(--font-16px-36px);
+    --middle-brand-x-pos: 16px;
 }
-.navigation .col{ 
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    padding-right: 0;
-    padding-left: 0;   
-    margin-left: -.75rem;
-    margin-right: -.75rem;
-    display: flex;
-    flex-basis: 0;
-    flex-grow: 1;
-    justify-content: flex-end;
-    align-items: center;
-    font-family: PPFormula-CondensedBold,Arial,Helvetica,sans-serif;
+.middle-brand-x{
+    font-size: calc(var(--brand-font-size) - 8px);
+    display: inline-block;
+    width: calc(var(--brand-font-size) - 10px);
 }
-.navigation .col a {
-    margin-left: .75rem;
-    margin-right: .75rem;
-    color: #fff;
-}
-.navigation .col a:after{
-    content: "";
+.middle-brand-x span{
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: currentColor;
-    transition: .4s;
-    transform-origin: left;
+    top: var(--middle-brand-x-pos);
 }
 .popup-button{
-    transition: transform .4s,opacity .4s;
-    transform-origin: bottom right;
-    bottom: .5rem;
-    right: .5rem;
-    height: 4em;
-    width: 4em;
-    position: fixed;
-    z-index: 1000;
-    font-size: var(--fs);
-    line-height: .93;
-    letter-spacing: .02em;
-}
-@media (min-width: 576px) {
-    .popup-button {
-        height: 5em;
-        width: 5em;
-    }
-}
-@media (min-width: 768px) {
-    .popup-button {
-        transform-origin: bottom left;
-        bottom: 1rem;
-        left: 1rem;
-        right: auto;
-        height: 8em;
-        width: 8em;
-    }
-}
-@media (min-width: 1080px) {
-    .popup-button {
-        height: 9.5em;
-        width: 9.5em;
-    }
-}
-.popup-button a{
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    opacity: .0001;
-}
-.popup-button a svg{
-    width: 100%;
-    height: 100%;
-}
-.popup-button a .text-wrapper{
-    transform-origin: center;
-    transform: translateX(-50%) translateY(-50%) rotate(-19deg);
-    top: 55%;
-    left: 48%;
+    height: var(--popup-button-height-width);
+    width: var(--popup-button-height-width);
     position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-image: url("../img/popup_button.svg");
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.popup-button a .text-wrapper h6{
+.large-screen{
     display: none;
-    margin-block: .25rem;
-    font-size: var(--fs);
-    line-height: .93;
-    letter-spacing: .02em;
-    color: var(--red4);
+  }
+  .text-wrapper {
+    text-align: center;
+    font-family: PPFormula-CondensedBold, sans-serif;
+    font-size: var(--popup-button-text-font-size);
+  }
+.text-wrapper h6{
+    text-transform: uppercase;
+    color:var(--red4);
 }
-.popup-button a .text-wrapper h6 span{
+.text-wrapper h5{
+    text-transform: lowercase;
     color: var(--red);
 }
-@media (min-width: 768px){
-    .popup-button a .text-wrapper h6{
-        display: block;
-    }
+@media (min-width: 576px) {
+  .large-screen{
+    display: block;
+  }
+  .small-screen {
+    display: none;
+  }
 }
