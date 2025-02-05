@@ -6,18 +6,20 @@
 @media (min-width: 320px) {
   :root {
     --font-16px-25px: calc(1rem + ((1vw - 3.2px) * 0.8036));
+    --font-88px-235px: calc(5.5rem + ((1vw - 3.2px) * 13.125));
     --popup-button-height-width:calc(6.25rem + ((1vw - 3.2px) * 8.9286));;
     --popup-button-text-font-size:calc(1.75rem + ((1vw - 3.2px) * 0.7143));
-    --f-88px-235px: calc(5.5rem + ((1vw - 3.2px) * 13.125));
+    --small-icons-height-width: calc(1.75rem + ((1vw - 3.2px) * 2.8571));
     min-height: 0vw;
   }
 }
 @media (min-width: 1440px) {
   :root {
     --font-16px-25px: 25px;
+    --font-88px-235px: 235px;
     --popup-button-height--width:200px;
     --popup-button-text-font-size: 36px;
-    --f-88px-235px: 235px;
+    --small-icons-height-width:60px;
   }
 }
 
@@ -29,7 +31,7 @@ body{
 .navigation{
     width: 100%;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -49,7 +51,7 @@ body{
 .popup-button{
     height: var(--popup-button-height-width);
     width: var(--popup-button-height-width);
-    position: absolute;
+    position: fixed;
     bottom: 1rem;
     right: 1rem;
     background-image: url("../img/popup_button.svg");
@@ -83,7 +85,7 @@ body{
     margin: 3.5rem auto 2rem auto;
 }
 .section-title-primary {
-    font-size: var(--f-88px-235px);
+    font-size: var(--font-88px-235px);
     text-transform: uppercase;
     text-align: center;
 }
@@ -94,6 +96,58 @@ body{
     text-transform: uppercase;
     margin: -19px 1rem 1rem 1rem;
     font-size: var(--font-16px-25px);
+}
+.img-icons-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4rem;
+}
+.banana-icon,
+.espresso-icon,
+.grapes-icon,
+.mango-icon,
+.rasperry-icon,
+.strawberry-icon{
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: var(--small-icons-height-width);
+    width: var(--small-icons-height-width);
+    border-radius: 5rem;
+    margin: 0px;
+    cursor: pointer;
+    transform: rotate(var(--angle)) 
+        translateX(calc(2rem + var(--x-offset))) 
+        rotate(calc(-1 * var(--angle)));
+}
+.banana-icon{
+    background-image: url("/img/small_img_banana.webp");
+    --angle: -285deg;
+    --x-offset: 17rem;
+}
+.espresso-icon{
+    background-image: url("/img/small_img_espresso.webp");
+    --angle: -274deg;
+    --x-offset: 11rem;
+}
+.grapes-icon{
+    background-image: url("/img/small_img_grapes.webp");
+    --angle: -256deg;
+    --x-offset: 6rem;
+}
+.mango-icon{
+    background-image: url("/img/small_img_mango.webp");
+    --angle: -225deg;
+    --x-offset: 3rem;
+}
+.rasperry-icon{    
+    background-image: url("/img/small_img_rasperry.webp");
+    --angle: -195deg;
+    --x-offset: 2rem;
+}
+.strawberry-icon{
+    background-image: url("/img/small_img_strawberry.webp");
+    --angle: -180deg;
+    --x-offset: 1.5rem;
 }
 @media (min-width: 576px) {
   .large-screen{
@@ -112,8 +166,16 @@ body{
 }
 @media (min-width:1024px){
       .section-title-secondary{
-        margin: -50px 0px 1rem 0px;
+        margin: -50px 2rem 1rem 2rem;
       }
+    .banana-icon,
+    .espresso-icon,
+    .grapes-icon,
+    .mango-icon,
+    .rasperry-icon,
+    .strawberry-icon{
+        margin: 1rem;
+    }
 }
 @media (min-width:1440px){
       .section-title-secondary{
