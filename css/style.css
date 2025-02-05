@@ -5,7 +5,7 @@
 
 @media (min-width: 320px) {
   :root {
-    --font-16px-36px: calc(1rem + ((1vw - 3.2px) * 1.7857));
+    --font-16px-25px: calc(1rem + ((1vw - 3.2px) * 0.8036));
     --popup-button-height-width:calc(6.25rem + ((1vw - 3.2px) * 8.9286));;
     --popup-button-text-font-size:calc(1.75rem + ((1vw - 3.2px) * 0.7143));
     --f-88px-235px: calc(5.5rem + ((1vw - 3.2px) * 13.125));
@@ -14,7 +14,7 @@
 }
 @media (min-width: 1440px) {
   :root {
-    --font-16px-36px: 36px;
+    --font-16px-25px: 25px;
     --popup-button-height--width:200px;
     --popup-button-text-font-size: 36px;
     --f-88px-235px: 235px;
@@ -37,7 +37,7 @@ body{
     font-family: PPFormula-CondensedBold, sans-serif;
     font-weight: 600;   
     text-transform: uppercase;
-    font-size: var(--font-16px-36px);
+    font-size: var(--font-16px-25px);
     cursor: pointer;
 }
 .top-right, .top-left{
@@ -78,7 +78,6 @@ body{
 }
 .section-title-container{
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
     font-family: PPFormula-CondensedBold, sans-serif;
     margin: 3.5rem auto 2rem auto;
@@ -92,6 +91,9 @@ body{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    text-transform: uppercase;
+    margin: -19px 1rem 1rem 1rem;
+    font-size: var(--font-16px-25px);
 }
 @media (min-width: 576px) {
   .large-screen{
@@ -104,7 +106,17 @@ body{
   .small-screen {
     display: none;
   }
-  .section-title-primary{
-    text-align: left;
+  .section-title-container{
+    margin-top: 2rem;
   }
+}
+@media (min-width:1024px){
+      .section-title-secondary{
+        margin: -50px 0px 1rem 0px;
+      }
+}
+@media (min-width:1440px){
+      .section-title-secondary{
+        margin-top: -60px;
+      }
 }
