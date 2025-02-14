@@ -21,3 +21,6 @@ svg {
 img, svg {
     vertical-align: middle;
 }
+body{
+    margin: 0;
+}
