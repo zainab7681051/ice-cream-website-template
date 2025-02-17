@@ -112,11 +112,7 @@ body{
     height: var(--hero-img-height);
     transform: translateY(-20%);
 }
-.img-icons-wrapper{
-    display: flex;
-    justify-content: flex-end;
-/*    margin-top: 4rem;*/
-}
+
 .banana-icon,
 .espresso-icon,
 .grapes-icon,
@@ -125,46 +121,43 @@ body{
 .strawberry-icon{
     background-repeat: no-repeat;
     background-size: contain;
+    position: absolute;
     height: var(--small-icons-height-width);
     width: var(--small-icons-height-width);
     border-radius: 5rem;
     margin: 0px;
     cursor: pointer;
-/*    transform: rotate(var(--angle)) 
-        translateX(calc(2rem + var(--x-offset))) 
-        rotate(calc(-1 * var(--angle)));*/
 }
 .banana-icon{
     background-image: url("/img/small_img_banana.webp");
-    --angle: -285deg;
-    --x-offset: 17rem;
+    right: 0;
+    top: 52%;
 }
 .espresso-icon{
     background-image: url("/img/small_img_espresso.webp");
-    --angle: -274deg;
-    --x-offset: 11rem;
+    right: 5%;
+    top: 56%;
 }
 .grapes-icon{
     background-image: url("/img/small_img_grapes.webp");
-    --angle: -256deg;
-    --x-offset: 6rem;
+    top: 62%;
+    right: 10%;
 }
 .mango-icon{
     background-image: url("/img/small_img_mango.webp");
-    --angle: -225deg;
-    --x-offset: 3rem;
+    right: 14%;
+    top: 70%;
 }
 .rasperry-icon{    
     background-image: url("/img/small_img_rasperry.webp");
-    --angle: -195deg;
-    --x-offset: 2rem;
+    top: 81%;
+    right: 17%;
 }
 .strawberry-icon{
     background-image: url("/img/small_img_strawberry.webp");
-    --angle: -180deg;
-    --x-offset: 1.5rem;
+    top: 93%;
+    right: 18.5%;  
 }
-
 .hero-txt-img-container{
     background-color: var(--red3);
     padding: 2.5rem 0 2rem 0;
@@ -204,6 +197,32 @@ body{
   .hero-txt-img-container{
     padding-top: 2rem;
   }
+}
+@media (min-width: 720px){
+    .banana-icon{
+    right: 0;
+    top: 52%;
+    }
+    .espresso-icon{
+        right: 5%;
+        top: 56%;
+    }
+    .grapes-icon{
+        top: 62%;
+        right: 10%;
+    }
+    .mango-icon{
+        right: 14%;
+        top: 70%;
+    }
+    .rasperry-icon{    
+        top: 81%;
+        right: 17%;
+    }
+    .strawberry-icon{
+        top: 93%;
+        right: 18.5%;  
+}
 }
 @media (min-width:1024px){
       .section-title-secondary{
