@@ -122,41 +122,45 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    height: var(--small-icons-height-width);
-    width: var(--small-icons-height-width);
+    height: calc(var(--small-icons-height-width) + 3px);
+    width: calc(var(--small-icons-height-width) + 3px);
     border-radius: 5rem;
     margin: 0px;
     cursor: pointer;
+    z-index: 6;
+    border-style: none;
+    right: 0;
 }
+/*from 270 degree to 180 degrees, translate on X axis*/
 .banana-icon{
     background-image: url("/img/small_img_banana.webp");
-    right: 0;
-    top: 52%;
+/*    right: 0;*/
+/*    top: 52%;*/
 }
 .espresso-icon{
     background-image: url("/img/small_img_espresso.webp");
-    right: 5%;
-    top: 56%;
+/*    right: 5%;*/
+/*    top: 56%;*/
 }
 .grapes-icon{
     background-image: url("/img/small_img_grapes.webp");
-    top: 62%;
-    right: 10%;
+/*    top: 62%;*/
+/*    right: 10%;*/
 }
 .mango-icon{
     background-image: url("/img/small_img_mango.webp");
-    right: 14%;
-    top: 70%;
+/*    right: 14%;*/
+/*    top: 70%;*/
 }
 .rasperry-icon{    
     background-image: url("/img/small_img_rasperry.webp");
-    top: 81%;
-    right: 17%;
+/*    top: 81%;*/
+/*    right: 17%;*/
 }
 .strawberry-icon{
     background-image: url("/img/small_img_strawberry.webp");
-    top: 93%;
-    right: 18.5%;  
+/*    top: 93%;*/
+/*    right: 18.5%;  */
 }
 .hero-txt-img-container{
     background-color: var(--red3);
@@ -200,42 +204,28 @@ body{
 }
 @media (min-width: 720px){
     .banana-icon{
-    right: 0;
-    top: 52%;
+        transform: rotate(270deg) translateX(365px) rotate(-270deg);
     }
     .espresso-icon{
-        right: 5%;
-        top: 56%;
+        transform: rotate(250deg) translateX(345px) rotate(-250deg);
     }
     .grapes-icon{
-        top: 62%;
-        right: 10%;
+        transform: rotate(240deg) translateX(330px) rotate(-240deg);
     }
     .mango-icon{
-        right: 14%;
-        top: 70%;
+        transform: rotate(230deg) translateX(310px) rotate(-230deg);
     }
     .rasperry-icon{    
-        top: 81%;
-        right: 17%;
+        transform: rotate(219deg) translateX(290px) rotate(-219deg);
     }
     .strawberry-icon{
-        top: 93%;
-        right: 18.5%;  
-}
+        transform: rotate(206deg) translateX(265px) rotate(-206deg);  
+    }
 }
 @media (min-width:1024px){
       .section-title-secondary{
         margin: -50px 2rem 1rem 2rem;
       }
-    .banana-icon,
-    .espresso-icon,
-    .grapes-icon,
-    .mango-icon,
-    .rasperry-icon,
-    .strawberry-icon{
-        margin: 1rem;
-    }
 }
 @media (min-width:1440px){
       .section-title-secondary{
