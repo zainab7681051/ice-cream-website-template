@@ -5,6 +5,7 @@
 
 @media (min-width: 320px) {
   :root {
+    min-height: 0vw;
     --font-16px-25px: calc(1rem + ((1vw - 3.2px) * 0.8036));
     --font-88px-235px: calc(5.5rem + ((1vw - 3.2px) * 13.125));
     --font-65px-135px:calc(4.0625rem + ((1vw - 3.2px) * 6.25));
@@ -13,8 +14,32 @@
     --hero-img-height: calc(12.5rem + ((1vw - 3.2px) * 23.6607));
     --small-icons-height-width: calc(1.75rem + ((1vw - 3.2px) * 2.8571));
     --text-on-bubble-top-px:calc(42.625rem + ((1vw - 3.2px) * 36.9643));
-    min-height: 0vw;
+    --small-icons-top-base: calc(22.25rem + ((1vw - 3.2px) * 41.5179));
+    --small-icons-left-base: calc(4.25rem + ((1vw - 3.2px) * 43.3036));
+    --espresso-icon-top-offset:calc(1.5625rem + ((1vw - 3.2px) * 2.2321)); 
+    --espresso-icon-left-offset:32px;
+    --grapes-icon-top-offset:calc(2.8125rem + ((1vw - 3.2px) * 3.7946)); 
+    --grapes-icon-left-offset:calc(4.1875rem + ((1vw - 3.2px) * 0.6696));
+    --mango-icon-top-offset: calc(2.8125rem + ((1vw - 3.2px) * 3.7946));
+    --mango-icon-left-offset: calc(6.875rem + ((1vw - 3.2px) * 2.2321));
+    --rasperry-icon-top-offset: calc(1.5625rem + ((1vw - 3.2px) * 2.2321));
+    --rasperry-icon-left-offset:calc(9rem + ((1vw - 3.2px) * 3.5714));
+    --strawberry-icon-left-offset:calc(11rem + ((1vw - 3.2px) * 4.4643));
   }
+}
+@media(min-width:768px){
+    :root{
+        --small-icons-top-base: 542px;
+        --small-icons-left-base:262px;
+        --espresso-icon-top-offset:35px;
+        --grapes-icon-top-offset:62px; 
+        --grapes-icon-left-offset:70px;
+        --mango-icon-top-offset:62px;
+        --mango-icon-left-offset:120px;
+        --rasperry-icon-top-offset:35px; 
+        --rasperry-icon-left-offset:160px;
+        --strawberry-icon-left-offset:196px;
+    }
 }
 @media (min-width: 1440px) {
   :root {
@@ -118,49 +143,47 @@ body{
 .grapes-icon,
 .mango-icon,
 .rasperry-icon,
-.strawberry-icon{
+.strawberry-icon {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
     height: calc(var(--small-icons-height-width) + 3px);
     width: calc(var(--small-icons-height-width) + 3px);
     border-radius: 5rem;
-    margin: 0px;
     cursor: pointer;
     z-index: 6;
     border-style: none;
-    right: 0;
 }
-/*from 270 degree to 180 degrees, translate on X axis*/
+
 .banana-icon{
     background-image: url("/img/small_img_banana.webp");
-/*    right: 0;*/
-/*    top: 52%;*/
+    top: var(--small-icons-top-base);
+    left: var(--small-icons-left-base);
 }
 .espresso-icon{
     background-image: url("/img/small_img_espresso.webp");
-/*    right: 5%;*/
-/*    top: 56%;*/
+    top: calc(var(--small-icons-top-base) + var(--espresso-icon-top-offset));
+    left: calc(var(--small-icons-left-base) + var(--espresso-icon-left-offset));
 }
 .grapes-icon{
     background-image: url("/img/small_img_grapes.webp");
-/*    top: 62%;*/
-/*    right: 10%;*/
+    top: calc(var(--small-icons-top-base) + var(--grapes-icon-top-offset));
+    left: calc(var(--small-icons-left-base) + var(--grapes-icon-left-offset));
 }
 .mango-icon{
     background-image: url("/img/small_img_mango.webp");
-/*    right: 14%;*/
-/*    top: 70%;*/
+    top: calc(var(--small-icons-top-base) + var(--mango-icon-top-offset));
+    left: calc(var(--small-icons-left-base) + var(--mango-icon-left-offset));
 }
 .rasperry-icon{    
     background-image: url("/img/small_img_rasperry.webp");
-/*    top: 81%;*/
-/*    right: 17%;*/
+    top: calc(var(--small-icons-top-base) + var(--rasperry-icon-top-offset));
+    left: calc(var(--small-icons-left-base) + var(--rasperry-icon-left-offset));
 }
-.strawberry-icon{
+.strawberry-icon{ 
     background-image: url("/img/small_img_strawberry.webp");
-/*    top: 93%;*/
-/*    right: 18.5%;  */
+    top: var(--small-icons-top-base);
+    left: calc(var(--small-icons-left-base) + var(--strawberry-icon-left-offset));
 }
 .hero-txt-img-container{
     background-color: var(--red3);
@@ -202,33 +225,72 @@ body{
     padding-top: 2rem;
   }
 }
-@media (min-width: 720px){
+@media (min-width:1024px){
+    .section-title-secondary{
+        margin: -45px 2rem 1rem 2rem;
+        justify-content: space-around;
+    }
+    .banana-icon,
+    .espresso-icon,
+    .grapes-icon,
+    .mango-icon,
+    .rasperry-icon,
+    .strawberry-icon{
+        top:unset;
+        left: unset;
+        right: 0;
+    }
     .banana-icon{
-        transform: rotate(270deg) translateX(365px) rotate(-270deg);
+        --degree: 268deg;
+        --x-axis: calc(18.125rem + ((1vw - 10.24px) * 24.0385));
+        transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
     .espresso-icon{
-        transform: rotate(250deg) translateX(345px) rotate(-250deg);
+        --degree: 256deg;
+        --x-axis: calc(17.625rem + ((1vw - 10.24px) * 24.0385));
+        transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
     .grapes-icon{
-        transform: rotate(240deg) translateX(330px) rotate(-240deg);
+        --degree: 244deg;
+        --x-axis: calc(16.875rem + ((1vw - 10.24px) * 24.0385));;
+        transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
     .mango-icon{
-        transform: rotate(230deg) translateX(310px) rotate(-230deg);
+        --degree: 232deg;
+        --x-axis: calc(15.375rem + ((1vw - 10.24px) * 24.0385));
+        transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
     .rasperry-icon{    
-        transform: rotate(219deg) translateX(290px) rotate(-219deg);
+        --degree: 218deg;
+        --x-axis: calc(14.3125rem + ((1vw - 10.24px) * 21.875));
+        transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
     .strawberry-icon{
-        transform: rotate(206deg) translateX(265px) rotate(-206deg);  
+        --degree: 204deg;
+        --x-axis: calc(13.375rem + ((1vw - 10.24px) * 20.6731));
+        transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));  
     }
 }
-@media (min-width:1024px){
-      .section-title-secondary{
-        margin: -50px 2rem 1rem 2rem;
-      }
-}
 @media (min-width:1440px){
-      .section-title-secondary{
+    .section-title-secondary{
         margin-top: -60px;
-      }
+    }
+    .banana-icon{
+        --x-axis: 390px;
+    }
+    .espresso-icon{
+        --x-axis: 382px;
+    }
+    .grapes-icon{
+        --x-axis: 370px;
+    }
+    .mango-icon{
+        --x-axis: 346px;
+    }
+    .rasperry-icon{    
+        --x-axis: 320px;
+    }
+    .strawberry-icon{
+        --x-axis: 300px;
+    }
 }
