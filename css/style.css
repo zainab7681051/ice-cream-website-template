@@ -221,7 +221,6 @@ body{
     border-top-left-radius: 50%;
     background-color: var(--yellow);
     margin-top: -10%;
-    font-family: 'PPFormula-CondensedBold';
 }
 .count {
    font-size: 323px;
@@ -232,11 +231,17 @@ body{
     text-align: center;
     text-transform: uppercase;
 }
+.count,.count-text{
+    color: var(--yellow3);
+    font-family: 'PPFormula-CondensedBold';
+}
 .slide-show {
     width: fit-content;
     display: flex;
     flex-direction: row;
     margin-top: 15%;
+    text-transform: uppercase;
+    font-family: 'PPFormula-CondensedRegular';
 }
 .slide {
     width: fit-content;
@@ -247,18 +252,25 @@ body{
     position: relative;
 }
 .slied-show-title {
-    font-size: 65px;
+    font-size: 40px;
 }
 .slide-show-tagline {
-    font-size: 38px;
-    margin-top: 5%;
+    font-size: 15px;
+    margin-top: 3%;
 }
 .slide-show-text {
-    font-size: 27px;
+    font-size: 15px;
     text-align: center;
     margin-left: 5rem;
     margin-right: 5rem;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+}
+
+.slied-show-title,
+.slide-show-tagline,
+.slide-show-text,
+.slide-show-bottom-text{
+    color:var(--red2);
 }
 .slide-show-bg {
     z-index: 1;
@@ -273,6 +285,7 @@ body{
     font-size: 265px;
     position: relative;
     text-transform: uppercase;
+    color: var(--yellow3);
 }
 .slide-show-bg-title-1{
     margin-bottom: -8%;
@@ -281,7 +294,7 @@ body{
     margin-top: -4%;
 }
 .slide-show-bottom-text {
-    font-size: 28px;
+    font-size: 15px;
     margin: 4rem 3rem .5rem 3rem;
     text-transform: uppercase;
 }
@@ -313,6 +326,37 @@ body{
     height: auto;
     width: 100%;
 }
+.down-arrow {
+    height: auto;
+    width: 47px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+.down-arrow svg{
+    height: auto;
+    width: auto;
+    fill: var(--red2);
+    transform: rotate(90deg);
+}
+.order-box {
+    background-color: var(--red2);
+    color: var(--white);
+    height: auto;
+    width: auto;
+    align-items: center;
+    width: 98%;
+    padding: 1rem 1rem 0rem 1rem;
+    text-transform: uppercase;
+    font-family: 'PPFormula-CondensedBold';
+}
+.order-box p{
+        font-size: 68px;
+    text-align: center;
+}
+.order-box p span{
+    color: var(--yellow3);
+}
+/*add font colors, add responsive font-sizes*/
 @media (min-width: 576px) {
   .large-screen{
     display: block;
