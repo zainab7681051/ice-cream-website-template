@@ -217,23 +217,34 @@ body{
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
+    border-top-right-radius: 25%;
+    border-top-left-radius: 25%;
     background-color: var(--yellow);
-    margin-top: -10%;
+    position: relative;
+}
+.yellow-bg-arc-svg {
+    background-image: url("../img/yellow-section-bg.svg");  
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: -9%;
 }
 .count {
-   font-size: 323px;
-    margin-top: 10%;
+   font-size: 623px;
 }
 .count-text {
     font-size: calc(var(--font-65px-135px) / 2);
     text-align: center;
     text-transform: uppercase;
+    margin-top: -5%;
 }
 .count,.count-text{
-    color: var(--yellow3);
+    color: var(--yellow5);
     font-family: 'PPFormula-CondensedBold';
+    position: relative;
 }
 .slide-show {
     width: fit-content;
@@ -405,7 +416,9 @@ footer {
     height: 100%;
     border-radius: 50%;
     cursor: pointer;
+    transition: border .2s ease-in-out;
 }
+
 .right-arrow,
 .left-arrow {
     width: 57px;
@@ -420,6 +433,8 @@ footer {
     font-size: 108px;
     font-family: 'PPFormula-CondensedBold';
     color: inherit;
+    margin:0px 25px 0px 25px;
+    transition: margin 0.2s ease-in-out;
 }
 .right-arrow{transform: rotate(270deg);}
 .left-arrow{transform: rotate(90deg);}
