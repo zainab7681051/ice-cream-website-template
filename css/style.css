@@ -327,15 +327,17 @@ body{
     width: 100%;
 }
 .down-arrow {
+    --arrow-color: var(--red2);
     height: auto;
     width: 47px;
     margin-top: 5%;
     margin-bottom: 10%;
+    align-self: center;
 }
-.down-arrow svg{
+.arrow{
     height: auto;
     width: auto;
-    fill: var(--red2);
+    fill: var(--arrow-color);
     transform: rotate(90deg);
 }
 .order-box {
@@ -350,11 +352,107 @@ body{
     font-family: 'PPFormula-CondensedBold';
 }
 .order-box p{
-        font-size: 68px;
+    font-size: 68px;
     text-align: center;
 }
 .order-box p span{
     color: var(--yellow3);
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--yellow);
+    color: var(--red2);
+    padding-top: 86px;
+}
+.hash-tag{
+    background-image: url("../img/hash-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 246px;
+    width: 482px;
+    font-size: 108px;
+    text-align: center;
+    color: var(--yellow);
+    background-position: center;
+    font-family: 'PPFormula-CondensedBold';
+    text-transform: uppercase;
+    padding: 16px;
+    align-self: center;
+}
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.socials-img-container {
+    width: 645px;
+    height: 645px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: var(--white);
+}
+.social-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.right-arrow,
+.left-arrow {
+    width: 57px;
+    height: 57px;
+    --arrow-color: var(--white);
+    position: relative;
+    z-index: 2;
+}
+.social-text {
+    position: relative;
+    z-index: 2;
+    font-size: 108px;
+    font-family: 'PPFormula-CondensedBold';
+    color: inherit;
+}
+.right-arrow{transform: rotate(270deg);}
+.left-arrow{transform: rotate(90deg);}
+.footer-statement {
+    font-family: 'PPFormula-CondensedBold';
+    margin: 100px 200px 200px 200px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 52px;
+    text-align: center;
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 10px 10px;
+}
+.footer-logo{
+    font-size: 65px;
+    font-family: 'PPFormula-CondensedBold';
+    text-transform: uppercase;
+    position: relative;
+}
+.trademark-symbol{
+    position: absolute;
+    font-size: 35px;
+}
+.footer-links a{
+    font-family: 'FoundersGrotesk-Semibold';
+    font-size: 25px;
+    text-transform: capitalize;
+    color: var(--red2);
+    margin-left: 20px;
 }
 /*add font colors, add responsive font-sizes*/
 @media (min-width: 576px) {
