@@ -25,7 +25,30 @@
     --rasperry-icon-top-offset: calc(1.5625rem + ((1vw - 3.2px) * 2.2321));
     --rasperry-icon-left-offset:calc(9rem + ((1vw - 3.2px) * 3.5714));
     --strawberry-icon-left-offset:calc(11rem + ((1vw - 3.2px) * 4.4643));
-  }
+    --font-192px-623px: calc(12rem + ((1vw - 3.2px) * 38.4821));
+    --font-20px-40px:calc(1.25rem + ((1vw - 3.2px) * 1.7857));
+    --font-11px-15px: calc(0.6875rem + ((1vw - 3.2px) * 0.3571));
+    --margin-16px-80px:calc(1rem + ((1vw - 3.2px) * 5.7143));
+    --font-61px-265px: calc(3.8125rem + ((1vw - 3.2px) * 18.2143));
+    --width-320px-780px:calc(20rem + ((1vw - 3.2px) * 41.0714));
+    --top-40px-201px:calc(2.5rem + ((1vw - 3.2px) * 14.375));
+    --width-105px-200px:calc(6.5625rem + ((1vw - 3.2px) * 8.4821));
+    --width-17px-47px:calc(1.0625rem + ((1vw - 3.2px) * 2.6786));
+    --font-20px-68px:calc(1.25rem + ((1vw - 3.2px) * 4.2857));
+    --height-68px-246px:calc(4.25rem + ((1vw - 3.2px) * 16.0714));
+    --width-134px-482px:calc(8.25rem + ((1vw - 3.2px) * 31.25));
+    --font-32px-108px:calc(2rem + ((1vw - 3.2px) * 6.7857));
+    --padding-1px-16px:calc(0.0625rem + ((1vw - 3.2px) * 1.3393));
+    --socials-img-size-160px-645px:calc(10rem + ((1vw - 3.2px) * 43.3036));
+    --width-15px-57px:calc(0.9375rem + ((1vw - 3.2px) * 3.75));
+    --height-12px-54px:calc(0.75rem + ((1vw - 3.2px) * 3.75));
+    --font-20px-108px:calc(1.25rem + ((1vw - 3.2px) * 7.8571));
+    --font-20px-52px:calc(1.25rem + ((1vw - 3.2px) * 2.8571));
+    --margin-20px-200px:calc(1.25rem + ((1vw - 3.2px) * 16.0714));
+    --font-50px-80px:calc(3.125rem + ((1vw - 3.2px) * 2.6786));;
+    --font-12px-35px:calc(0.75rem + ((1vw - 3.2px) * 2.0536));
+    --font-12px-25px:calc(0.75rem + ((1vw - 3.2px) * 1.1607));
+    }
 }
 @media(min-width:768px){
     :root{
@@ -51,6 +74,29 @@
     --small-icons-height-width:60px;
     --hero-img-height: 465px;
     --text-on-bubble-top-px:1096px;
+    --font-192px-623px: 623px;
+    --font-20px-40px: 40px;
+    --font-11px-15px:15px;
+    --margin-16px-80px:80px;
+    --font-61px-265px:265px;
+    --width-320px-780px:780px;
+    --top-40px-201px:201px;
+    --width-105px-200px:200px;
+    --width-17px-47px:47px;
+    --font-20px-68px:68px;
+    --height-68px-246px:246px;
+    --width-134px-482px:482px;
+    --font-32px-108px:108px;
+    --padding-1px-16px: 16px;
+    --socials-img-size-160px-645px:645px;
+    --width-15px-57px:57px;
+    --height-12px-54px: 54px;
+    --font-20px-108px:108px;
+    --font-20px-52px:52px;
+    --margin-20px-200px:200px;
+    --font-50px-80px:80px;
+    --font-12px-35px:35px;
+    --font-12px-25px:25px;
   }
 }
 
@@ -217,23 +263,14 @@ body{
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
-    border-top-right-radius: 25%;
-    border-top-left-radius: 25%;
     background-color: var(--yellow);
     position: relative;
-}
-.yellow-bg-arc-svg {
-    background-image: url("../img/yellow-section-bg.svg");  
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
     margin-top: -9%;
 }
+
 .count {
-   font-size: 623px;
+   font-size: var(--font-192px-623px);
+   margin-top: 5%;
 }
 .count-text {
     font-size: calc(var(--font-65px-135px) / 2);
@@ -263,17 +300,17 @@ body{
     position: relative;
 }
 .slied-show-title {
-    font-size: 40px;
+    font-size: var(--font-20px-40px);
 }
 .slide-show-tagline {
     font-size: 15px;
     margin-top: 3%;
 }
 .slide-show-text {
-    font-size: 15px;
+    font-size: var(--font-11px-15px);
     text-align: center;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: var(--margin-16px-80px);
+    margin-right: var(--margin-16px-80px);
     margin-bottom: 5%;
 }
 
@@ -293,7 +330,7 @@ body{
 }
 .slide-show-bg-title-1,.slide-show-bg-title-2{
     z-index: 0;
-    font-size: 265px;
+    font-size: var(--font-61px-265px);
     position: relative;
     text-transform: uppercase;
     color: var(--yellow3);
@@ -305,7 +342,8 @@ body{
     margin-top: -4%;
 }
 .slide-show-bottom-text {
-    font-size: 15px;
+    font-size: var(--font-11px-15px);
+    text-align: center;
     margin: 4rem 3rem .5rem 3rem;
     text-transform: uppercase;
 }
@@ -316,8 +354,8 @@ body{
     align-content: center;
     align-items: center;
     justify-content: center;
-    width: 780px;
     height: auto;
+    width: var(--width-320px-780px);
 }
 .slide-show-bg {
     z-index: 1;
@@ -327,9 +365,9 @@ body{
 }
 .slide-show-main-container{
     position: absolute;
-    top: 201px;
+    top: var(--top-40px-201px);
     height: auto;
-    width: 200px;
+    width: var(--width-105px-200px);
 }
 .slide-show-main-img {
     position: relative;
@@ -340,7 +378,7 @@ body{
 .down-arrow {
     --arrow-color: var(--red2);
     height: auto;
-    width: 47px;
+    width: var(--width-17px-47px);
     margin-top: 5%;
     margin-bottom: 10%;
     align-self: center;
@@ -358,12 +396,12 @@ body{
     width: auto;
     align-items: center;
     width: 98%;
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     text-transform: uppercase;
     font-family: 'PPFormula-CondensedBold';
 }
 .order-box p{
-    font-size: 68px;
+    font-size: var(--font-20px-68px);
     text-align: center;
 }
 .order-box p span{
@@ -380,16 +418,17 @@ footer {
     background-image: url("../img/hash-bg.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    height: 246px;
-    width: 482px;
-    font-size: 108px;
+    height: var(--height-68px-246px);
+    width: var(--width-134px-482px);
+    font-size: var(--font-32px-108px);
     text-align: center;
     color: var(--yellow);
     background-position: center;
     font-family: 'PPFormula-CondensedBold';
     text-transform: uppercase;
-    padding: 16px;
+    padding: var(--padding-1px-16px);
     align-self: center;
+
 }
 .socials {
     display: flex;
@@ -398,8 +437,8 @@ footer {
     margin-top: 40px;
 }
 .socials-img-container {
-    width: 645px;
-    height: 645px;
+    width: var(--socials-img-size-160px-645px);
+    height: var(--socials-img-size-160px-645px);
     position: relative;
     display: flex;
     align-items: center;
@@ -421,55 +460,56 @@ footer {
 
 .right-arrow,
 .left-arrow {
-    width: 57px;
-    height: 57px;
     --arrow-color: var(--white);
     position: relative;
     z-index: 2;
+    width: var(--width-15px-57px);
+    height: var(--height-12px-54px);
 }
 .social-text {
     position: relative;
     z-index: 2;
-    font-size: 108px;
     font-family: 'PPFormula-CondensedBold';
     color: inherit;
     margin:0px 25px 0px 25px;
     transition: margin 0.2s ease-in-out;
+    font-size: var(--font-20px-108px);
 }
 .right-arrow{transform: rotate(270deg);}
 .left-arrow{transform: rotate(90deg);}
 .footer-statement {
     font-family: 'PPFormula-CondensedBold';
-    margin: 100px 200px 200px 200px;
-    width: fit-content;
-    height: fit-content;
-    font-size: 52px;
     text-align: center;
+    font-size: var(--font-20px-52px);
+    margin: 20px var(--margin-20px-200px) 100px var(--margin-20px-200px);
+}
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 10px 10px;
+    flex-direction: column; /* large screens: row */
+}
+.footer-logo{
+    font-family: 'PPFormula-CondensedBold';
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    font-size: var(--font-50px-80px);
+}
+.trademark-symbol{
+    position: absolute;
+    font-size: var(--font-12px-35px);
 }
 .footer-links {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px 10px 10px;
-}
-.footer-logo{
-    font-size: 65px;
-    font-family: 'PPFormula-CondensedBold';
-    text-transform: uppercase;
-    position: relative;
-}
-.trademark-symbol{
-    position: absolute;
-    font-size: 35px;
 }
 .footer-links a{
     font-family: 'FoundersGrotesk-Semibold';
-    font-size: 25px;
     text-transform: capitalize;
     color: var(--red2);
-    margin-left: 20px;
+    font-size: var(--font-12px-25px);
 }
-/*add font colors, add responsive font-sizes*/
 @media (min-width: 576px) {
   .large-screen{
     display: block;
@@ -487,7 +527,13 @@ footer {
 }
 
 @media (min-width:768px){
-
+    .footer-links-container{
+        flex-direction: row;
+        align-items: center;
+    }
+    .footer-links a{
+        margin-left: 16px;
+    }
 }
 
 @media (min-width:1024px){
