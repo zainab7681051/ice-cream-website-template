@@ -122,6 +122,19 @@ body{
 }
 .top-right, .top-left{
     color: var(--white);
+    position: relative;
+}
+.top-right::before, .top-left::before{
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    width: 0;
+    height: 1px;
+    background-color: var(--white);
+    transition: width .3s ease-in-out;
+}
+.top-right:hover::before, .top-left:hover::before{
+    width: 100%;
 }
 .middle-brand-x{
     display: inline-block;
@@ -263,7 +276,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
-    background-color: var(--yellow);
+    background-color: var(--light-yellow);
     position: relative;
     margin-top: -9%;
 }
@@ -279,7 +292,7 @@ body{
     margin-top: -5%;
 }
 .count,.count-text{
-    color: var(--yellow5);
+    color: var(--yellow3);
     font-family: 'PPFormula-CondensedBold';
     position: relative;
 }
@@ -444,20 +457,23 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    color: var(--white);
-}
-.social-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
     cursor: pointer;
-    transition: border .2s ease-in-out;
+    transition: box-shadow .3s ease-in-out;
 }
-
+.socials-img-container:hover{
+    box-shadow:inset 0 0 0 30px;
+}
+/*image hidesthe box-shadow of prarent*/
+.social-img {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
 .right-arrow,
 .left-arrow {
     --arrow-color: var(--white);
@@ -470,7 +486,7 @@ footer {
     position: relative;
     z-index: 2;
     font-family: 'PPFormula-CondensedBold';
-    color: inherit;
+    color: var(--white);
     margin:0px 25px 0px 25px;
     transition: margin 0.2s ease-in-out;
     font-size: var(--font-20px-108px);
@@ -487,7 +503,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 0px 10px 10px 10px;
-    flex-direction: column; /* large screens: row */
+    flex-direction: column;
 }
 .footer-logo{
     font-family: 'PPFormula-CondensedBold';
@@ -509,6 +525,19 @@ footer {
     text-transform: capitalize;
     color: var(--red2);
     font-size: var(--font-12px-25px);
+    position: relative;
+}
+.footer-links a::before{
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    width: 0;
+    height: 1px;
+    background-color: var(--red2);
+    transition: width .3s ease-in-out;
+}
+.footer-links a:hover::before{
+    width: 100%;
 }
 @media (min-width: 576px) {
   .large-screen{
