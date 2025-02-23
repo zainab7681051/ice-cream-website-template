@@ -576,12 +576,14 @@ footer {
 
 @media (min-width:1024px){
     .popup-button{
-        opacity: 0;
+        opacity: 1;
+        transform: rotate(-23deg) scale(1.2);
     }
     .navigation,
     .section-title-primary,
     .section-title-secondary,
-    .hero-img-container{
+    .hero-img-container,
+    .text-on-bubble-img{
         transform: translateY(50px);
         opacity: 0;
     }
