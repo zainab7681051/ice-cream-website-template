@@ -99,7 +99,9 @@
     --font-12px-25px:25px;
   }
 }
-
+html{
+      scroll-behavior: smooth;
+}
 body{
     background-color: var(--white);
     font-family: FoundersGrotesk-Regular, sans-serif;
@@ -260,14 +262,14 @@ body{
     z-index: 3;
 }
 .text-on-bubble-img{
-     width: 80%;
+    width: 100%;
     color: var(--red);
     text-transform: uppercase;
     position: absolute;
     z-index: 4;
-    top: var(--text-on-bubble-top-px);
-    right: 10%;
-    font-size: var(--font-65px-135px);
+    top: 10%;
+    left: 0;
+    font-size: calc(var(--font-88px-235px) - 20px);
     text-align: center;
 }
 
