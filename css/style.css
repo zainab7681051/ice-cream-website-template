@@ -504,6 +504,13 @@ footer {
 }
 .right-arrow{transform: rotate(270deg);}
 .left-arrow{transform: rotate(90deg);}
+/*wrong selection?*/
+.inset-shadow:hover~.right-arrow{
+    margin-left: -20px;
+}
+.inset-shadow:hover~.left-arrow{
+    margin-right: -20px;
+}
 .footer-statement {
     font-family: 'PPFormula-CondensedBold';
     text-align: center;
