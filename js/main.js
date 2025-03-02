@@ -1,27 +1,33 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
 
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 function gsap_animate(){
-	const tl = gsap.timeline();
-	return tl.to(".navigation", {opacity:1, y:0, duration: 1.5, ease: "power2.in"},0)
-	.to(".section-title-primary", {opacity:1, y:0, duration: 1.5, ease: "power2.in"},0)
-	.to(".section-title-secondary", {opacity:1, y:0, duration: 1.5, ease: "power2.in"},0)
-	.to(".hero-img-container", {opacity:1, y:0, duration: 1.5, ease: "power2.in"},0)
-	.from(
-	  ".banana-icon, .espresso-icon, .grapes-icon, .mango-icon, .rasperry-icon, .strawberry-icon",
-	  { x: "-50vh",
+	gsap.from(".navigation, .section-title-primary, .section-title-secondary, .hero-img-container", {
+		opacity:0, 
+		y:50, 
+		duration: 1.5, 
+		ease: "power1.in",
+		stagger: 0.2
+	}, 0);
+	// gsap.to(".section-title-primary", {opacity:1, y:0, duration: 1.5, ease: "power1.in"},0)
+	// gsap.to(".section-title-secondary", {opacity:1, y:0, duration: 1.5, ease: "power1.in"},0)
+	// gsap.to(".hero-img-container", {opacity:1, y:0, duration: 1.5, ease: "power1.in"},0)
+	gsap.from(
+	  ".banana-icon, .espresso-icon, .grapes-icon, .mango-icon, .rasperry-icon, .strawberry-icon",{ 
+	  	x: "-50vh",
 	  	y:"10vh",
 	    duration: 1.5,
-	    ease: "power3.out",
+	    ease: "power1.out",
 	    stagger: 0.2
 	  }, 0.5)
-	.from(".popup-button",{opacity:0, duration:1.5,ease: "power2.out"}, 1.5)
-	.to(".popup-button", {
+	gsap.from(".popup-button",{opacity:0, duration:1.5,ease: "power1.out"}, 1.5)
+	gsap.to(".popup-button", {
 	  scale: 1,
-	  ease: "power2.inOut",
+	  ease: "power1.inOut",
 	  duration:2.5,
 	  scrollTrigger: {
 	    trigger: "#intro",
@@ -30,9 +36,9 @@ function gsap_animate(){
 	    scrub: true,
 	  }
 	}, 0)
-	.to(".popup-button", {
+	gsap.to(".popup-button", {
 	  display: "none",
-	  ease: "power2.inOut",
+	  ease: "power1.inOut",
 	  duration:2.5,
 	  scrollTrigger: {
 	    trigger: "footer",
@@ -40,15 +46,73 @@ function gsap_animate(){
 	    end: "top center",
 	    scrub: true
 	  }
-	}, 0)
-	.to(".text-on-bubble-img", {opacity:1, y:0, duration:2.5, ease: "power2.in",
+	}, 0);
+
+	gsap.to(".text-on-bubble-img", {
+		opacity:1, 
+		y:0, 
+		duration:1, 
+		ease: "power1.in",
 		scrollTrigger:{
 			trigger:"#pink-bubbles-img-container",
 			start: "top center",
 			toggleActions: "play none none none",
-			markers: true
 		}
-	},0)
+	},0);
+
+	gsap.to(".count", {
+		duration:1,
+		ease: "none",
+		innerText: 6,
+		snap: { innerText: 1 },
+		scrollTrigger:{
+			trigger:".slide-show-section",
+			start: "top center",
+			toggleActions: "play none none none"
+		},
+		onUpdate: function() {
+                const currentVal = Math.ceil(this.targets()[0].textContent);
+                this.targets()[0].textContent = currentVal;
+            },
+	}, 0);
+
+	gsap.to(".down-arrow",{
+		y:85,
+		repeat: -1,
+		duration: 0.6,
+		repeatDelay: 0.2,
+		yoyo: true,
+		ease: "power1.inOut",
+		scrollTrigger: {
+			trigger: ".down-arrow",
+			start: "top 80%",
+		}
+	}, 0);
+
+	gsap.from(".socials-img-container", {
+		opacity: 0,
+		duration: .9,
+		stagger: 0.5, 
+		ease: "power1.in",
+		scrollTrigger:{
+			trigger:".socials",
+			start: "top center",
+			toggleActions: "play none none none",
+		}
+	}, 0);
+
+	gsap.from(".footer-statement, .footer-logo, .footer-links", {
+		opacity: 0,
+		y: 50,
+		duration: 1,
+		stagger: 0.5, 
+		ease: "power1.in",
+		scrollTrigger:{
+			trigger:".footer-statement",
+			start: "top 80%",
+			toggleActions: "play none none none",
+		}
+	}, 0);
 }
 addEventListener("load", () =>{
     const mm = gsap.matchMedia();
