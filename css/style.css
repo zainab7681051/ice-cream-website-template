@@ -9,9 +9,10 @@
     --font-16px-25px: calc(1rem + ((1vw - 3.2px) * 0.8036));
     --font-88px-235px: calc(5.5rem + ((1vw - 3.2px) * 13.125));
     --font-65px-135px:calc(4.0625rem + ((1vw - 3.2px) * 6.25));
-    --popup-button-height-width:calc(6.25rem + ((1vw - 3.2px) * 8.9286));;
+    --popup-button-height-width:calc(6.25rem + ((1vw - 3.2px) * 8.9286));
     --popup-button-text-font-size:calc(1.75rem + ((1vw - 3.2px) * 0.7143));
-    --hero-img-height: calc(12.5rem + ((1vw - 3.2px) * 23.6607));
+    --hero-img-container-height: calc(12.5rem + ((1vw - 3.2px) * 23.6607));
+    --hero-img-height: calc(12.6875rem + ((1vw - 3.2px) * 44.375));
     --small-icons-height-width: calc(1.75rem + ((1vw - 3.2px) * 2.8571));
     --text-on-bubble-top-px:calc(42.625rem + ((1vw - 3.2px) * 36.9643));
     --small-icons-top-base: calc(22.25rem + ((1vw - 3.2px) * 41.5179));
@@ -45,7 +46,7 @@
     --font-20px-108px:calc(1.25rem + ((1vw - 3.2px) * 7.8571));
     --font-20px-52px:calc(1.25rem + ((1vw - 3.2px) * 2.8571));
     --margin-20px-200px:calc(1.25rem + ((1vw - 3.2px) * 16.0714));
-    --font-50px-80px:calc(3.125rem + ((1vw - 3.2px) * 2.6786));;
+    --font-50px-80px:calc(3.125rem + ((1vw - 3.2px) * 2.6786));
     --font-12px-35px:calc(0.75rem + ((1vw - 3.2px) * 2.0536));
     --font-12px-25px:calc(0.75rem + ((1vw - 3.2px) * 1.1607));
     }
@@ -72,7 +73,8 @@
     --popup-button-height--width:200px;
     --popup-button-text-font-size: 36px;
     --small-icons-height-width:60px;
-    --hero-img-height: 465px;
+    --hero-img-container-height: 465px;
+    --hero-img-height:700px;
     --text-on-bubble-top-px:1096px;
     --font-192px-623px: 623px;
     --font-20px-40px: 40px;
@@ -192,10 +194,11 @@ body{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    height: var(--hero-img-container-height);
 }
 .hero-img{
     height: var(--hero-img-height);
-    transform: translateY(-20%);
+    transform: translateY(-25%);
 }
 
 .banana-icon,
@@ -265,7 +268,7 @@ body{
     text-transform: uppercase;
     position: absolute;
     z-index: 4;
-    top: 10%;
+    top: 15%;
     left: 0;
     font-size: calc(var(--font-88px-235px) - 20px);
     text-align: center;

@@ -8,23 +8,26 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 function gsap_animate(){
 	gsap.from(".navigation, .section-title-primary, .section-title-secondary, .hero-img-container", {
 		opacity:0, 
-		y:50, 
-		duration: 1.5, 
+		y:10, 
+		duration: 1, 
 		ease: "power1.in",
-		stagger: 0.2
+		stagger: 0.5
 	}, 0);
-	// gsap.to(".section-title-primary", {opacity:1, y:0, duration: 1.5, ease: "power1.in"},0)
-	// gsap.to(".section-title-secondary", {opacity:1, y:0, duration: 1.5, ease: "power1.in"},0)
-	// gsap.to(".hero-img-container", {opacity:1, y:0, duration: 1.5, ease: "power1.in"},0)
+
 	gsap.from(
 	  ".banana-icon, .espresso-icon, .grapes-icon, .mango-icon, .rasperry-icon, .strawberry-icon",{ 
 	  	x: "-50vh",
 	  	y:"10vh",
-	    duration: 1.5,
+	    duration: 1,
 	    ease: "power1.out",
 	    stagger: 0.2
-	  }, 0.5)
-	gsap.from(".popup-button",{opacity:0, duration:1.5,ease: "power1.out"}, 1.5)
+	  }, 2)
+	gsap.from(".popup-button",{
+		opacity:0, 
+		duration:1.5,
+		ease: "power1.out"
+	}, 1.5)
+
 	gsap.to(".popup-button", {
 	  scale: 1,
 	  ease: "power1.inOut",
@@ -36,6 +39,7 @@ function gsap_animate(){
 	    scrub: true,
 	  }
 	}, 0)
+
 	gsap.to(".popup-button", {
 	  display: "none",
 	  ease: "power1.inOut",
@@ -48,9 +52,9 @@ function gsap_animate(){
 	  }
 	}, 0);
 
-	gsap.to(".text-on-bubble-img", {
-		opacity:1, 
-		y:0, 
+	gsap.from(".text-on-bubble-img", {
+		opacity:0, 
+		top:"25%", 
 		duration:1, 
 		ease: "power1.in",
 		scrollTrigger:{
@@ -91,7 +95,7 @@ function gsap_animate(){
 
 	gsap.from(".socials-img-container", {
 		opacity: 0,
-		duration: .9,
+		duration: .5,
 		stagger: 0.5, 
 		ease: "power1.in",
 		scrollTrigger:{
@@ -103,7 +107,7 @@ function gsap_animate(){
 
 	gsap.from(".footer-statement, .footer-logo, .footer-links", {
 		opacity: 0,
-		y: 50,
+		y: 5,
 		duration: 1,
 		stagger: 0.5, 
 		ease: "power1.in",
