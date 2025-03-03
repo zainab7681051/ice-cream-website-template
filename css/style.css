@@ -162,7 +162,6 @@ body{
     transform: rotate(-23deg);
     z-index: 10;
 }
-.popup-button:hover #g-ball-mask{}
 .large-screen{
     display: none;
   }
@@ -202,9 +201,19 @@ body{
 }
 .hero-img-container{
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    justify-content: space-around;
     height: var(--hero-img-container-height);
+    position: relative;
+    overflow: hidden;
+}
+.hero-slide{
+    display: none;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+.hero-slide.active{
+    display: block;
+    opacity: 1;
 }
 .hero-img{
     height: var(--hero-img-height);

@@ -118,8 +118,9 @@ function gsap_animate(){
 		}
 	}, 0);
 }
+
 addEventListener("load", () =>{
     const mm = gsap.matchMedia();
-    mm.add('(min-width: 1024px)', () => gsap_animate())
+    mm.add('(min-width: 1024px)', () => gsap_animate());
 })
 
