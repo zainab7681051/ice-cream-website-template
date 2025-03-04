@@ -189,11 +189,10 @@ body{
 
 }
 .hero-txt-img-container{
-    background-color: var(--red3);
+    background-color: var(--strawberry-hero-bg-color);
     padding: 2.5rem 0 2rem 0;
-}
-.hero-bg{
-    background-color: var(--bg-color);
+    color: #fff;
+    transition: background-color .3s ease-in-out;
 }
 .section-title-container{
     display: flex;
