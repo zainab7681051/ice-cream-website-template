@@ -5,19 +5,14 @@
 
 @media (min-width: 320px) {
   :root {
+    --banana-hero-bg-color:rgb(249, 219, 0);
+    --espresso-hero-bg-color:rgb(192, 154, 127);
+    --grapes-hero-bg-color:rgb(159, 76, 135);
+    --mango-hero-bg-color:rgb(220, 33, 50);
+    --rasperry-hero-bg-color:rgb(174, 35, 58);
+    --strawberry-hero-bg-color:rgb(253, 205, 212);
+
     min-height: 0vw;
-/*    --banana-bg-color:;
-    --banana-fg-color
-    --espresso-bg-color
-    --espresso-fg-color
-    --grapes-bg-color:;
-    --grapes-fg-color:;
-    --mango-bg-color:;
-    --mango-fg-color:;
-    --rasperry-bg-color:;
-    --rasperry-fg-color:;
-    --strawberry-bg-color:;
-    --strawberry-fg-color:;*/
     --font-16px-25px: calc(1rem + ((1vw - 3.2px) * 0.8036));
     --font-88px-235px: calc(5.5rem + ((1vw - 3.2px) * 13.125));
     --font-65px-135px:calc(4.0625rem + ((1vw - 3.2px) * 6.25));
@@ -197,6 +192,9 @@ body{
     background-color: var(--red3);
     padding: 2.5rem 0 2rem 0;
 }
+.hero-bg{
+    background-color: var(--bg-color);
+}
 .section-title-container{
     display: flex;
     flex-direction: column;
@@ -236,7 +234,27 @@ body{
     height: var(--hero-img-height);
     transform: translateY(-25%);
 }
-
+#hero-slide-strawberry{
+    --bg-color: var(--strawberry-hero-bg-color);
+}
+#hero-slide-rasperry{
+    --bg-color: var(--rasperry-hero-bg-color);
+}
+#hero-slide-mango{
+    --bg-color: var(--mango-hero-bg-color);
+}
+#hero-slide-grapes{
+    --bg-color: var(--grapes-hero-bg-color);
+}
+#hero-slide-espresso{
+    --bg-color: var(--espresso-hero-bg-color);
+}
+#hero-slide-banana{
+    --bg-color: var(--banana-hero-bg-color);
+}
+.hero-bg{
+    background-color: var(--bg-color);
+}
 .icon-btn{
     background-repeat: no-repeat;
     background-size: contain;
@@ -252,32 +270,32 @@ body{
 .icon-btn-active{
     box-shadow:inset 0 0 0 3px var(--white)
 }
-.strawberry-icon{
+.banana-icon{
     background-image: url("/img/small_img_banana.webp");
     top: var(--small-icons-top-base);
     left: var(--small-icons-left-base);
 }
-.rasperry-icon{
+.espresso-icon{
     background-image: url("/img/small_img_espresso.webp");
     top: calc(var(--small-icons-top-base) + var(--espresso-icon-top-offset));
     left: calc(var(--small-icons-left-base) + var(--espresso-icon-left-offset));
 }
-.mango-icon{
+.grapes-icon{
     background-image: url("/img/small_img_grapes.webp");
     top: calc(var(--small-icons-top-base) + var(--grapes-icon-top-offset));
     left: calc(var(--small-icons-left-base) + var(--grapes-icon-left-offset));
 }
-.grapes-icon{
+.mango-icon{
     background-image: url("/img/small_img_mango.webp");
     top: calc(var(--small-icons-top-base) + var(--mango-icon-top-offset));
     left: calc(var(--small-icons-left-base) + var(--mango-icon-left-offset));
 }
-.espresso-icon{    
+.rasperry-icon{    
     background-image: url("/img/small_img_rasperry.webp");
     top: calc(var(--small-icons-top-base) + var(--rasperry-icon-top-offset));
     left: calc(var(--small-icons-left-base) + var(--rasperry-icon-left-offset));
 }
-.banana-icon{ 
+.strawberry-icon{ 
     background-image: url("/img/small_img_strawberry.webp");
     top: var(--small-icons-top-base);
     left: calc(var(--small-icons-left-base) + var(--strawberry-icon-left-offset));
@@ -628,32 +646,32 @@ footer {
         left: unset;
         right: 0;
     }
-    .strawberry-icon{
+    .banana-icon{
         --degree: 268deg;
         --x-axis: calc(18.125rem + ((1vw - 10.24px) * 24.0385));
         transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
-    .rasperry-icon{
+    .espresso-icon{
         --degree: 256deg;
         --x-axis: calc(17.625rem + ((1vw - 10.24px) * 24.0385));
         transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
-    .mango-icon{
+    .grapes-icon{
         --degree: 244deg;
         --x-axis: calc(16.875rem + ((1vw - 10.24px) * 24.0385));;
         transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
-    .grapes-icon{
+    .mango-icon{
         --degree: 232deg;
         --x-axis: calc(15.375rem + ((1vw - 10.24px) * 24.0385));
         transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
-    .espresso-icon{    
+    .rasperry-icon{    
         --degree: 218deg;
         --x-axis: calc(14.3125rem + ((1vw - 10.24px) * 21.875));
         transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));
     }
-    .banana-icon{
+    .strawberry-icon{
         --degree: 204deg;
         --x-axis: calc(13.375rem + ((1vw - 10.24px) * 20.6731));
         transform: rotate(var(--degree)) translateX(var(--x-axis)) rotate(calc(-1 * var(--degree)));  
