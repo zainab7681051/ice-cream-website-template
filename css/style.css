@@ -215,9 +215,9 @@ body{
 .hero-img-container{
     display: flex;
     justify-content: space-around;
-    height: var(--hero-img-container-height);
-    position: relative;
     overflow: hidden;
+    position: relative;
+    height: var(--hero-img-container-height);
 }
 .hero-slide{
     position: absolute;
@@ -348,9 +348,12 @@ body{
     position: relative;
 }
 .slide-show {
-    width: fit-content;
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height:auto;
+/*    overflow: hidden;*/
+    position: relative;
     margin-top: 15%;
     text-transform: uppercase;
     font-family: 'PPFormula-CondensedRegular';
@@ -362,6 +365,7 @@ body{
     align-content: center;
     align-items: center;
     position: relative;
+    margin: 0px 20% 0px 20%;
 }
 .slied-show-title {
     font-size: var(--font-20px-40px);
@@ -394,7 +398,7 @@ body{
 }
 .slide-show-bg-title-1,.slide-show-bg-title-2{
     z-index: 0;
-    font-size: var(--font-61px-265px);
+    font-size: calc(var(--font-61px-265px) - 10px);
     position: relative;
     text-transform: uppercase;
     color: var(--yellow3);

@@ -1,12 +1,12 @@
 import {gsap_animate} from "./gsap_animation.js";
 
-class HeroSlide{
-	current_index = 0;
-	autoply_id = null;
+class HeroSlideShow{
 	constructor(){
 		this.slides = document.querySelectorAll('.hero-slide');
 		this.total_slides = this.slides.length;
 		this.slide_icon_btns = document.querySelectorAll('.icon-btn');
+		this.current_index = 0;
+		this.autoply_id = null;
 	}
 	show_hero_slide(){
 		this.current_index = this.current_index % this.total_slides;
@@ -49,10 +49,37 @@ class HeroSlide{
 	}
 }
 
+// class SectionSlideShow{
+// 	constructor(){
+// 		this.slides = document.querySelectorAll('.hero-slide');
+// 		this.total_slides = this.slides.length;
+// 		this.slide_icon_btns = document.querySelectorAll('.icon-btn');
+// 		this.current_index = 0;
+// 		this.autoply_id = null;
+// 	}
+// 	show_hero_slide(){
+// 		this.current_index = this.current_index % this.total_slides;
+// 		this.toggle_elements_class(this.slides, this.current_index, "hero-slide-active");
+// 		this.toggle_elements_class(this.slide_icon_btns, this.current_index, "icon-btn-active")
+// 		this.change_hero_bg_color(this.slides[this.current_index]);
+// 		this.current_index++;
+// 	}
+// 	toggle_elements_class(element, index, className, ){
+// 		element.forEach(e => e.classList.remove(className));
+// 		element[index].classList.add(className);
+// 	}
+// 	change_hero_bg_color(slide){
+// 		const bg_color = slide.querySelector(".hero-bg");
+// 		const hero_txt_img_container = document.querySelector(".hero-txt-img-container");
+// 		let color = getComputedStyle(bg_color).backgroundColor;
+// 		console.log("color: ", color);
+// 		hero_txt_img_container.style.backgroundColor = color;
+// 	}
+// }
 addEventListener("load", () => {
 	gsap_animate();
 
-    const hero_slide = new HeroSlide();
+    const hero_slide = new HeroSlideShow();
     hero_slide.bind_slide_icons();
     hero_slide.start_autoplay();		
 })
