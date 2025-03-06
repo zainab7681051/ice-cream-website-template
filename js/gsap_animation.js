@@ -23,7 +23,7 @@ export function gsap_animate(){
 		    duration: 1,
 		    ease: "power1.out",
 		    stagger: 0.2
-		  }, 2)
+		  }, 1.5)
 		gsap.from(".popup-button",{
 			opacity:0, 
 			duration:1.5,
@@ -31,9 +31,9 @@ export function gsap_animate(){
 		}, 1.5)
 
 		gsap.to(".popup-button", {
-		  scale: 1,
+		  scale: .9,
 		  ease: "power1.inOut",
-		  duration:2.5,
+		  duration:1.5,
 		  scrollTrigger: {
 		    trigger: "#intro",
 		    start: "top top",
@@ -45,7 +45,7 @@ export function gsap_animate(){
 		gsap.to(".popup-button", {
 		  display: "none",
 		  ease: "power1.inOut",
-		  duration:2.5,
+		  duration:1.5,
 		  scrollTrigger: {
 		    trigger: "footer",
 		    start: "top bottom",

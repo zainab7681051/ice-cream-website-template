@@ -1,6 +1,5 @@
 @import "./fonts.css";
 @import "./reset.css";
-@import "./font_sizes.css";
 @import "./colors.css";
 
 @media (min-width: 320px) {
@@ -12,7 +11,12 @@
     --rasperry-hero-bg-color:rgb(174, 35, 58);
     --strawberry-hero-bg-color:rgb(253, 205, 212);
 
+    --strawberry-slide-bg-color:#F4B9C8;
+    --strawberry-slide-title-color:#EF1525;
+    --strawberry-slide-text-color:#EA1B0E;
+
     min-height: 0vw;
+    --font-2px-16px:calc(0.125rem + ((1vw - 3.2px) * 1.25));
     --font-16px-25px: calc(1rem + ((1vw - 3.2px) * 0.8036));
     --font-88px-235px: calc(5.5rem + ((1vw - 3.2px) * 13.125));
     --font-65px-135px:calc(4.0625rem + ((1vw - 3.2px) * 6.25));
@@ -77,6 +81,7 @@
 }
 @media (min-width: 1440px) {
   :root {
+    --font-2px-16px: 16px;
     --font-16px-25px: 25px;
     --font-88px-235px: 235px;
     --font-65px-135px: 135px;
@@ -114,13 +119,11 @@
     --popup-size-height: 246px;
   }
 }
-html{
-      scroll-behavior: smooth;
-}
 body{
-    background-color: var(--white);
     font-family: FoundersGrotesk-Regular, sans-serif;
+    background-color: var(--white);
     color: var(--white);
+    scroll-behavior: smooth;
 }
 .navigation{
     width: 100%;
@@ -323,13 +326,15 @@ body{
 }
 
 .slide-show-section {
+    --border-color: var(--strawberry-hero-bg-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
-    background-color: var(--light-yellow);
+    background-color: var(--strawberry-slide-bg-color);
     position: relative;
     margin-top: -9%;
+    border-top: solid var(--font-11px-26px) var(--border-color);
 }
 
 .count {
@@ -341,19 +346,17 @@ body{
     text-align: center;
     text-transform: uppercase;
     margin-top: -5%;
+    letter-spacing: var(--font-2px-16px);
 }
 .count,.count-text{
-    color: var(--yellow3);
+    color: var(--strawberry-slide-title-color);
     font-family: 'PPFormula-CondensedBold';
     position: relative;
 }
 .slide-show {
     display: flex;
+    width: fit-content;
     flex-direction: row;
-    width: 100%;
-    height:auto;
-/*    overflow: hidden;*/
-    position: relative;
     margin-top: 15%;
     text-transform: uppercase;
     font-family: 'PPFormula-CondensedRegular';
@@ -365,7 +368,6 @@ body{
     align-content: center;
     align-items: center;
     position: relative;
-    margin: 0px 20% 0px 20%;
 }
 .slied-show-title {
     font-size: var(--font-20px-40px);
@@ -386,7 +388,7 @@ body{
 .slide-show-tagline,
 .slide-show-text,
 .slide-show-bottom-text{
-    color:var(--red2);
+    color:var(--strawberry-slide-text-color);
 }
 .slide-show-bg {
     z-index: 1;
@@ -398,16 +400,16 @@ body{
 }
 .slide-show-bg-title-1,.slide-show-bg-title-2{
     z-index: 0;
-    font-size: calc(var(--font-61px-265px) - 10px);
+    font-size: var(--font-61px-265px);
     position: relative;
     text-transform: uppercase;
-    color: var(--yellow3);
+    color: var(--strawberry-slide-title-color);
 }
 .slide-show-bg-title-1{
-    margin-bottom: -8%;
+    margin-bottom: -9%;
 }
 .slide-show-bg-title-2{
-    margin-top: -4%;
+    margin-top: -3%;
 }
 .slide-show-bottom-text {
     font-size: var(--font-11px-15px);
@@ -459,7 +461,7 @@ body{
 }
 .order-box {
     background-color: var(--red2);
-    color: var(--white);
+    color: var(--strawberry-slide-bg-color);
     height: auto;
     width: auto;
     align-items: center;
@@ -573,6 +575,7 @@ footer {
     text-transform: uppercase;
     position: relative;
     text-align: center;
+    cursor: pointer;
     font-size: var(--font-50px-80px);
 }
 .footer-logo::before{
